@@ -1,0 +1,26 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y -400 -defaultsOSRD
+preplace port out_1 -pg 1 -y -680 -defaultsOSRD
+preplace port out_2 -pg 1 -y -640 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y -380 -defaultsOSRD
+preplace portBus in_1 -pg 1 -y -850 -defaultsOSRD
+preplace portBus in_2 -pg 1 -y -820 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 1 -y -850 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 1 -y -760 -defaultsOSRD
+preplace inst simple_in_n_out_0 -pg 1 -lvl 2 -y -650 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y -290 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 1 690J
+preplace netloc xlslice_1_Dout 1 1 2 190 -820 NJ
+preplace netloc processing_system7_0_GPIO_O 1 0 3 -20 -710 NJ -710 680
+preplace netloc processing_system7_0_FIXED_IO 1 2 1 700J
+preplace netloc simple_in_n_out_0_out_1 1 2 1 700
+preplace netloc simple_in_n_out_0_out_2 1 2 1 N
+preplace netloc xlslice_0_Dout 1 1 2 180J -850 N
+levelinfo -pg 1 -40 80 520 780 -top -1080 -bot 180
+",
+}
+{
+   da_ps7_cnt: "1",
+}

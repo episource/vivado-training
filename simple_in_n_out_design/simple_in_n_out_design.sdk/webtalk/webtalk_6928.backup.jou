@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Sat Sep  9 10:34:23 2017
+# Process ID: 6928
+# Current directory: C:/Users/Philipp/Documents/Scratch/Vivado/VivadoTraining/CustomIPWrapper1/CustomIPWrapper1.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Philipp/Documents/Scratch/Vivado/VivadoTraining/CustomIPWrapper1/CustomIPWrapper1.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Philipp/Documents/Scratch/Vivado/VivadoTraining/CustomIPWrapper1/CustomIPWrapper1.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

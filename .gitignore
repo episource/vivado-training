@@ -1,0 +1,11 @@
+**/*.sdk/*/Debug
+**/*.sdk/*/Release
+**/*.sdk/.metadata/**/*.log
+**/*.sdk/.metadata/**/*.snap
+**/*.sdk/SDx.log
+**/*.cache/wt
+**/*.sdk/.metadata
+**/*.tmp
+**/vivado*.jou
+**/vivado*.log
+**/vivado*.str
