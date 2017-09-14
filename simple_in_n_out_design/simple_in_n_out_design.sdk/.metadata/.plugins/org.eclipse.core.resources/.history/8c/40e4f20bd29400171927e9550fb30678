@@ -1,0 +1,8 @@
+#include <xparameters.h>
+#include <xplatform_info.h>
+#include <xil_printf.h>
+#include <xgpiops.h>
+
+int main() {
+	XGpioPs xGpioPs;
+}

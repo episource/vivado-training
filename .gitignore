@@ -4,7 +4,6 @@
 **/*.sdk/.metadata/**/*.snap
 **/*.sdk/SDx.log
 **/*.cache/wt
-**/*.sdk/.metadata
 **/*.tmp
 **/vivado*.jou
 **/vivado*.log

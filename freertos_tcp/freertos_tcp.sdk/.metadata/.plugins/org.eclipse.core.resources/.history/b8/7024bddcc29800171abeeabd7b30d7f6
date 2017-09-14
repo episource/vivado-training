@@ -1,0 +1,107 @@
+/*
+ * FreeRTOS_IpAddr.h
+ *
+ *  Created on: 13.09.2017
+ *      Author: Philipp
+ */
+
+#ifndef SRC_FREERTOS_IPADDR_H_
+#define SRC_FREERTOS_IPADDR_H_
+
+/****** TCP demo settings. ****************************************************/
+
+/* Default MAC address configuration.  */
+#define configMAC_ADDR0		0x00
+#define configMAC_ADDR1		0x11
+#define configMAC_ADDR2		0x22
+#define configMAC_ADDR3		0x33
+#define configMAC_ADDR4		0x44
+#define configMAC_ADDR5		0x49
+
+/* Default IP address configuration.  Used in ipconfigUSE_DHCP is set to 0, or
+ipconfigUSE_DHCP is set to 1 but a DHCP server cannot be contacted. */
+#define configIP_ADDR0		172
+#define configIP_ADDR1		25
+#define configIP_ADDR2		218
+#define configIP_ADDR3		200
+
+/* Default gateway IP address configuration.  Used in ipconfigUSE_DHCP is set to
+0, or ipconfigUSE_DHCP is set to 1 but a DHCP server cannot be contacted. */
+#define configGATEWAY_ADDR0	172
+#define configGATEWAY_ADDR1	25
+#define configGATEWAY_ADDR2	218
+#define configGATEWAY_ADDR3	1
+
+/* Default DNS server configuration.  OpenDNS addresses are 208.67.222.222 and
+208.67.220.220.  Used in ipconfigUSE_DHCP is set to 0, or ipconfigUSE_DHCP is set
+to 1 but a DHCP server cannot be contacted.*/
+#define configDNS_SERVER_ADDR0 	208
+#define configDNS_SERVER_ADDR1 	67
+#define configDNS_SERVER_ADDR2 	222
+#define configDNS_SERVER_ADDR3 	222
+
+/* Default netmask configuration.  Used in ipconfigUSE_DHCP is set to 0, or
+ipconfigUSE_DHCP is set to 1 but a DHCP server cannot be contacted. */
+#define configNET_MASK0		255
+#define configNET_MASK1		255
+#define configNET_MASK2		255
+#define configNET_MASK3		0
+
+/****** Demo settings. *************************************************/
+
+/* The directory used as the root of the webserver. */
+#define configHTTP_ROOT 					"/ram/websrc"
+
+/* Optional CLI commands to include. */
+#define configINCLUDE_QUERY_HEAP_COMMAND 	1
+#define configINCLUDE_DEMO_DEBUG_STATS 		1
+
+/****** UDP logging settings. *************************************************
+See http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/UDP_Logging.html */
+
+/* If set to 1 then each message sent via the UDP logging facility will end
+with \r\n.  If set to 0 then each message sent via the UDP logging facility will
+end with \n. */
+#define configUDP_LOGGING_NEEDS_CR_LF  ( 0 )
+
+/* Sets the maximum length for a string sent via the UDP logging facility. */
+#define configUDP_LOGGING_STRING_LENGTH	( 200 )
+
+/* The UDP logging facility buffers messages until the UDP logging task is able
+to transmit them.  configUDP_LOGGING_MAX_MESSAGES_IN_BUFFER sets the maximum
+number of messages that can be buffered at any one time. */
+#define	configUDP_LOGGING_MAX_MESSAGES_IN_BUFFER	( 20 )
+
+/* The UDP logging facility creates a task to send buffered messages to the UDP
+port.  configUDP_LOGGING_TASK_STACK_SIZE sets the task's stack size. */
+#define	configUDP_LOGGING_TASK_STACK_SIZE  	( 512 )
+
+/* The UDP logging facility creates a task to send buffered messages to the UDP
+port.  configUDP_LOGGING_TASK_PRIORITY sets the task's priority.  It is
+suggested to give the task a low priority to ensure it does not adversely effect
+the performance of other TCP/IP stack activity. */
+#define configUDP_LOGGING_TASK_PRIORITY   	( tskIDLE_PRIORITY )
+
+/* The UDP port to which the UDP logging facility sends messages. */
+#define configUDP_LOGGING_PORT_LOCAL	1499
+#define configUDP_LOGGING_PORT_REMOTE	1500
+
+/* The IP address to which the UDP logging facility sends messages.  If not
+defined then the local broadcast address will be used - although some switches
+and routers will not pass broadcast messages. */
+#define configUDP_LOGGING_ADDR0	192
+#define configUDP_LOGGING_ADDR1	168
+#define configUDP_LOGGING_ADDR2	0
+#define configUDP_LOGGING_ADDR3	15
+
+/* The address of an echo server that will be used by the two demo echo client
+tasks.
+http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/TCP_Echo_Clients.html
+http://www.freertos.org/FreeRTOS-Plus/FreeRTOS_Plus_TCP/UDP_Echo_Clients.html */
+#define configECHO_SERVER_ADDR0	192
+#define configECHO_SERVER_ADDR1 168
+#define configECHO_SERVER_ADDR2 0
+#define configECHO_SERVER_ADDR3 15
+
+
+#endif /* SRC_FREERTOS_IPADDR_H_ */
