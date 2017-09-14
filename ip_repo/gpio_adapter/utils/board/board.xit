@@ -1,0 +1,24 @@
+package require xilinx::board 1.0
+namespace import ::xilinx::board::*
+
+# Note:
+# When using this file as template, remember to:
+# - Replace variables GPIO_OUT_BOARD_INTERFACE + GPIO_VECTOR_SIZE by their
+#   correct names
+# - Replace physical port names gpio_out_* by their correct names
+
+set instname [current_inst]
+set f_xdc [add_ipfile -usedIn  [list synthesis implementation board ] -force ${instname}_board.xdc]
+puts_ipfile $f_xdc "#--------------------Physical Constraints-----------------\n"
+if { [get_project_property BOARD] == "" } {
+    close_ipfile $f_xdc
+    return 
+}
+
+set board_if [get_property PARAM_VALUE.GPIO_OUT_BOARD_INTERFACE]
+set gpio_width [get_property PARAM_VALUE.GPIO_VECTOR_SIZE]
+if { $board_if ne "Custom"} {
+    board_add_tri_state_port_constraints $f_xdc $board_if \
+    TRI_I gpio_out_i TRI_O gpio_out_o TRI_T gpio_out_t $gpio_width
+}
+close_ipfile $f_xdc

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="gpio_adapter_design_processing_system7_0_0_synth_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/gpio_adapter_design_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gpio_adapter_design_xlslice_1_0_synth_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/gpio_adapter_design_xlslice_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gpio_adapter_design_xlslice_0_0_synth_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/gpio_adapter_design_xlslice_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gpio_adapter_design_xlconcat_0_0_synth_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/gpio_adapter_design_xlconcat_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gpio_adapter_design_vector_in_n_out_0_0_synth_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/gpio_adapter_design_vector_in_n_out_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="gpio_adapter_design_gpio_adapter_0_18_synth_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/gpio_adapter_design_gpio_adapter_0_18_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="gpio_adapter_design_processing_system7_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_xlslice_1_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_xlslice_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_xlconcat_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_vector_in_n_out_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_gpio_adapter_0_18_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/gpio_adapter_design/gpio_adapter_design.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="gpio_adapter_design_processing_system7_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_xlslice_1_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_xlslice_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_xlconcat_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_vector_in_n_out_0_0_synth_1"/>
+		<Parent Id="gpio_adapter_design_gpio_adapter_0_18_synth_1"/>
+	</Run>
+</Runs>
+
