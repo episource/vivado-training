@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;zeth/src/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_1.c&apos; to &apos;BufferAllocation_1.c.exclude&apos;" description="Rename resource &apos;BufferAllocation_1.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/FreeRTOS-Plus-TCP/portable/BufferManagement/BufferAllocation_1.c" name="BufferAllocation_1.c.exclude" stamp="1505336230378" updateReferences="true"/>
-</session>
