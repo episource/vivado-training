@@ -1,8 +1,9 @@
 **/*.sdk/*/Debug
 **/*.sdk/*/Release
-**/*.sdk/.metadata/**/*.log
-**/*.sdk/.metadata/**/*.snap
+**/*.sdk/.metadata
+**/*.sdk/.sdk/launch_scripts
 **/*.sdk/SDx.log
+**/*.sdk/SDK.log
 **/*.cache/wt
 **/*.tmp
 **/vivado*.jou
