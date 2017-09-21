@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../flipflop.ip_user_files/bd/design_1/ip/design_1_flipflop_noclock_0_0/design_1_flipflop_noclock_0_0_sim_netlist.vhdl"
+vhdl xil_defaultlib  "../../../flipflop.ip_user_files/bd/design_1/hdl/design_1.vhd"
+vhdl xil_defaultlib  "../../../flipflop.srcs/sim_1/new/design_1_tb.vhd"
+
+# Do not sort compile order
+nosort

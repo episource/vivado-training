@@ -1,0 +1,18 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port LD0 -pg 1 -y 50 -defaultsOSRD
+preplace port BTN0 -pg 1 -y 50 -defaultsOSRD
+preplace port LD1 -pg 1 -y 70 -defaultsOSRD
+preplace port LD2 -pg 1 -y 30 -defaultsOSRD -left
+preplace port BTN1 -pg 1 -y 70 -defaultsOSRD
+preplace port LD3 -pg 1 -y 90 -defaultsOSRD -left
+preplace inst flipflop_noclock_0 -pg 1 -lvl 1 -y 60 -defaultsOSRD
+preplace netloc flipflop_noclock_0_out_q 1 1 1 N
+preplace netloc BTN1_1 1 0 1 -20
+preplace netloc flipflop_noclock_0_out_qbar 1 1 1 N
+preplace netloc BTN0_1 1 0 1 -20
+levelinfo -pg 1 -40 70 260 -top -160 -bot 160
+",
+}
+0

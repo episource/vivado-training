@@ -1,0 +1,40 @@
+
+*** Running vivado
+    with args -log flipflop_noclock_design_util_vector_logic_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source flipflop_noclock_design_util_vector_logic_1_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source flipflop_noclock_design_util_vector_logic_1_0.tcl -notrace
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 308.957 ; gain = 77.941
+INFO: [Synth 8-638] synthesizing module 'flipflop_noclock_design_util_vector_logic_1_0' [c:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/flipflop/flipflop.srcs/sources_1/bd/flipflop_noclock_design/ip/flipflop_noclock_design_util_vector_logic_1_0/synth/flipflop_noclock_design_util_vector_logic_1_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic' [c:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/flipflop/flipflop.srcs/sources_1/bd/flipflop_noclock_design/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'util_vector_logic_v2_0_1_util_vector_logic' (1#1) [c:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/flipflop/flipflop.srcs/sources_1/bd/flipflop_noclock_design/ipshared/25ee/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
+INFO: [Synth 8-256] done synthesizing module 'flipflop_noclock_design_util_vector_logic_1_0' (2#1) [c:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/flipflop/flipflop.srcs/sources_1/bd/flipflop_noclock_design/ip/flipflop_noclock_design_util_vector_logic_1_0/synth/flipflop_noclock_design_util_vector_logic_1_0.v:57]
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 349.035 ; gain = 118.020
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 349.035 ; gain = 118.020
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 349.035 ; gain = 118.020
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 349.035 ; gain = 118.020
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 476.598 ; gain = 245.582
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 476.598 ; gain = 245.582
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 476.598 ; gain = 245.582
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 562.270 ; gain = 331.879
+write_checkpoint: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 930.223 ; gain = 367.953

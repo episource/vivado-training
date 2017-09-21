@@ -1,0 +1,7 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/flipflop/flipflop.ip_user_files/bd/design_1/ip/design_1_flipflop_noclock_0_0/design_1_flipflop_noclock_0_0_sim_netlist.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_flipflop_noclock_0_0_flipflop_noclock
+INFO: [VRFC 10-307] analyzing entity design_1_flipflop_noclock_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/flipflop/flipflop.ip_user_files/bd/design_1/hdl/design_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/flipflop/flipflop.srcs/sim_1/new/design_1_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_tb
