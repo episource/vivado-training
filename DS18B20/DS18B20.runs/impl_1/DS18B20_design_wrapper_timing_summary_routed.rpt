@@ -1,0 +1,1482 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Nov  2 11:44:58 2017
+| Host         : Wimucs running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file DS18B20_design_wrapper_timing_summary_routed.rpt -rpx DS18B20_design_wrapper_timing_summary_routed.rpx
+| Design       : DS18B20_design_wrapper
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 3 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    972.792        0.000                      0                  482        0.153        0.000                      0                  482      499.500        0.000                       0                   229  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock       Waveform(ns)         Period(ns)      Frequency(MHz)
+-----       ------------         ----------      --------------
+clk_fpga_0  {0.000 5.000}        10.000          100.000         
+clk_fpga_1  {0.000 500.000}      1000.000        1.000           
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpga_1        972.792        0.000                      0                  482        0.153        0.000                      0                  482      499.500        0.000                       0                   229  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpga_1
+  To Clock:  clk_fpga_1
+
+Setup :            0  Failing Endpoints,  Worst Slack      972.792ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.153ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack      499.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             972.792ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[4]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.748ns  (logic 3.842ns (32.704%)  route 7.906ns (67.296%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.725ns = ( 1002.725 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.359    14.771    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.533  1002.725    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[4]/C
+                         clock pessimism              0.267  1002.992    
+                         clock uncertainty          -15.000   987.992    
+    SLICE_X2Y67          FDRE (Setup_fdre_C_R)       -0.429   987.563    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[4]
+  -------------------------------------------------------------------
+                         required time                        987.563    
+                         arrival time                         -14.771    
+  -------------------------------------------------------------------
+                         slack                                972.792    
+
+Slack (MET) :             972.792ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[5]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.748ns  (logic 3.842ns (32.704%)  route 7.906ns (67.296%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.725ns = ( 1002.725 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.359    14.771    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.533  1002.725    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[5]/C
+                         clock pessimism              0.267  1002.992    
+                         clock uncertainty          -15.000   987.992    
+    SLICE_X2Y67          FDRE (Setup_fdre_C_R)       -0.429   987.563    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[5]
+  -------------------------------------------------------------------
+                         required time                        987.563    
+                         arrival time                         -14.771    
+  -------------------------------------------------------------------
+                         slack                                972.792    
+
+Slack (MET) :             972.792ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[6]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.748ns  (logic 3.842ns (32.704%)  route 7.906ns (67.296%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.725ns = ( 1002.725 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.359    14.771    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[6]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.533  1002.725    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[6]/C
+                         clock pessimism              0.267  1002.992    
+                         clock uncertainty          -15.000   987.992    
+    SLICE_X2Y67          FDRE (Setup_fdre_C_R)       -0.429   987.563    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[6]
+  -------------------------------------------------------------------
+                         required time                        987.563    
+                         arrival time                         -14.771    
+  -------------------------------------------------------------------
+                         slack                                972.792    
+
+Slack (MET) :             972.792ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[7]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.748ns  (logic 3.842ns (32.704%)  route 7.906ns (67.296%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.725ns = ( 1002.725 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.359    14.771    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[7]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.533  1002.725    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X2Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[7]/C
+                         clock pessimism              0.267  1002.992    
+                         clock uncertainty          -15.000   987.992    
+    SLICE_X2Y67          FDRE (Setup_fdre_C_R)       -0.429   987.563    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[7]
+  -------------------------------------------------------------------
+                         required time                        987.563    
+                         arrival time                         -14.771    
+  -------------------------------------------------------------------
+                         slack                                972.792    
+
+Slack (MET) :             972.814ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[40]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.583ns  (logic 3.842ns (33.169%)  route 7.741ns (66.831%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.079ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.714ns = ( 1002.714 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.195    14.606    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X0Y73          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[40]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.522  1002.714    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y73          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[40]/C
+                         clock pessimism              0.230  1002.944    
+                         clock uncertainty          -15.000   987.944    
+    SLICE_X0Y73          FDRE (Setup_fdre_C_R)       -0.524   987.420    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[40]
+  -------------------------------------------------------------------
+                         required time                        987.420    
+                         arrival time                         -14.606    
+  -------------------------------------------------------------------
+                         slack                                972.814    
+
+Slack (MET) :             972.814ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[43]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.583ns  (logic 3.842ns (33.169%)  route 7.741ns (66.831%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.079ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.714ns = ( 1002.714 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.195    14.606    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X0Y73          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[43]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.522  1002.714    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y73          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[43]/C
+                         clock pessimism              0.230  1002.944    
+                         clock uncertainty          -15.000   987.944    
+    SLICE_X0Y73          FDRE (Setup_fdre_C_R)       -0.524   987.420    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[43]
+  -------------------------------------------------------------------
+                         required time                        987.420    
+                         arrival time                         -14.606    
+  -------------------------------------------------------------------
+                         slack                                972.814    
+
+Slack (MET) :             972.814ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[45]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.583ns  (logic 3.842ns (33.169%)  route 7.741ns (66.831%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.079ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.714ns = ( 1002.714 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.195    14.606    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X0Y73          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[45]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.522  1002.714    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y73          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[45]/C
+                         clock pessimism              0.230  1002.944    
+                         clock uncertainty          -15.000   987.944    
+    SLICE_X0Y73          FDRE (Setup_fdre_C_R)       -0.524   987.420    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[45]
+  -------------------------------------------------------------------
+                         required time                        987.420    
+                         arrival time                         -14.606    
+  -------------------------------------------------------------------
+                         slack                                972.814    
+
+Slack (MET) :             972.823ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[10]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.581ns  (logic 3.842ns (33.174%)  route 7.739ns (66.826%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.071ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.722ns = ( 1002.722 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.193    14.604    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X0Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[10]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.530  1002.722    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[10]/C
+                         clock pessimism              0.230  1002.952    
+                         clock uncertainty          -15.000   987.952    
+    SLICE_X0Y66          FDRE (Setup_fdre_C_R)       -0.524   987.428    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[10]
+  -------------------------------------------------------------------
+                         required time                        987.428    
+                         arrival time                         -14.604    
+  -------------------------------------------------------------------
+                         slack                                972.823    
+
+Slack (MET) :             972.823ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[8]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.581ns  (logic 3.842ns (33.174%)  route 7.739ns (66.826%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.071ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.722ns = ( 1002.722 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.193    14.604    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X0Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[8]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.530  1002.722    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[8]/C
+                         clock pessimism              0.230  1002.952    
+                         clock uncertainty          -15.000   987.952    
+    SLICE_X0Y66          FDRE (Setup_fdre_C_R)       -0.524   987.428    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[8]
+  -------------------------------------------------------------------
+                         required time                        987.428    
+                         arrival time                         -14.604    
+  -------------------------------------------------------------------
+                         slack                                972.823    
+
+Slack (MET) :             972.823ns  (required time - arrival time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[9]/R
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1000.000ns  (clk_fpga_1 rise@1000.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        11.581ns  (logic 3.842ns (33.174%)  route 7.739ns (66.826%))
+  Logic Levels:           11  (CARRY4=6 LUT2=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.071ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.722ns = ( 1002.722 - 1000.000 ) 
+    Source Clock Delay      (SCD):    3.023ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      15.000ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    30.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.207     1.207    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     1.308 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.715     3.023    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X3Y59          FDSE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y59          FDSE (Prop_fdse_C_Q)         0.456     3.479 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/Q
+                         net (fo=1, routed)           0.582     4.061    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer[2]
+    SLICE_X2Y59          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     4.735 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry/CO[3]
+                         net (fo=1, routed)           0.000     4.735    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry_n_0
+    SLICE_X2Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.849 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     4.849    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__0_n_0
+    SLICE_X2Y61          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.963 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     4.963    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__1_n_0
+    SLICE_X2Y62          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.077    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__2_n_0
+    SLICE_X2Y63          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     5.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2_carry__3/O[1]
+                         net (fo=2, routed)           0.832     6.243    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state2__38[18]
+    SLICE_X3Y62          LUT2 (Prop_lut2_I0_O)        0.303     6.546 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1/O
+                         net (fo=1, routed)           0.000     6.546    DS18B20_design_i/SENSOR_DS18B20_0/U0/i__carry_i_2__1_n_0
+    SLICE_X3Y62          CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.570     7.116 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1/CO[2]
+                         net (fo=23, routed)          1.761     8.877    DS18B20_design_i/SENSOR_DS18B20_0/U0/comm_state1_inferred__2/i__carry__1_n_1
+    SLICE_X4Y70          LUT4 (Prop_lut4_I0_O)        0.335     9.212 f  DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5/O
+                         net (fo=27, routed)          1.719    10.931    DS18B20_design_i/SENSOR_DS18B20_0/U0/bytes_transmitted[4]_i_5_n_0
+    SLICE_X6Y71          LUT4 (Prop_lut4_I1_O)        0.356    11.287 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4/O
+                         net (fo=2, routed)           1.146    12.433    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_4_n_0
+    SLICE_X1Y70          LUT6 (Prop_lut6_I5_O)        0.348    12.781 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2/O
+                         net (fo=49, routed)          0.507    13.287    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_2_n_0
+    SLICE_X2Y68          LUT5 (Prop_lut5_I0_O)        0.124    13.411 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1/O
+                         net (fo=48, routed)          1.193    14.604    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number[47]_i_1_n_0
+    SLICE_X0Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[9]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                   1000.000  1000.000 r  
+    PS7_X0Y0             PS7                          0.000  1000.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           1.101  1001.101    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091  1001.192 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         1.530  1002.722    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[9]/C
+                         clock pessimism              0.230  1002.952    
+                         clock uncertainty          -15.000   987.952    
+    SLICE_X0Y66          FDRE (Setup_fdre_C_R)       -0.524   987.428    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[9]
+  -------------------------------------------------------------------
+                         required time                        987.428    
+                         arrival time                         -14.604    
+  -------------------------------------------------------------------
+                         slack                                972.823    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.153ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[35]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[35]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.213ns  (logic 0.164ns (76.958%)  route 0.049ns (23.042%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.208ns
+    Source Clock Delay      (SCD):    0.912ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.571     0.912    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y71          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[35]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y71          FDRE (Prop_fdre_C_Q)         0.164     1.076 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[35]/Q
+                         net (fo=1, routed)           0.049     1.125    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number[35]
+    SLICE_X1Y71          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[35]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.838     1.208    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y71          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[35]/C
+                         clock pessimism             -0.283     0.925    
+    SLICE_X1Y71          FDRE (Hold_fdre_C_D)         0.047     0.972    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[35]
+  -------------------------------------------------------------------
+                         required time                         -0.972    
+                         arrival time                           1.125    
+  -------------------------------------------------------------------
+                         slack                                  0.153    
+
+Slack (MET) :             0.154ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_temperature_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.259ns  (logic 0.141ns (54.469%)  route 0.118ns (45.531%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.216ns
+    Source Clock Delay      (SCD):    0.920ns
+    Clock Pessimism Removal (CPR):    0.263ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.579     0.920    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X2Y63          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y63          FDRE (Prop_fdre_C_Q)         0.141     1.061 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[5]/Q
+                         net (fo=1, routed)           0.118     1.178    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature[5]
+    SLICE_X1Y62          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_temperature_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.846     1.216    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y62          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_temperature_reg[5]/C
+                         clock pessimism             -0.263     0.953    
+    SLICE_X1Y62          FDRE (Hold_fdre_C_D)         0.072     1.025    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_temperature_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.025    
+                         arrival time                           1.178    
+  -------------------------------------------------------------------
+                         slack                                  0.154    
+
+Slack (MET) :             0.162ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.259ns  (logic 0.141ns (54.399%)  route 0.118ns (45.601%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.031ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.213ns
+    Source Clock Delay      (SCD):    0.919ns
+    Clock Pessimism Removal (CPR):    0.263ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.578     0.919    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X2Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y66          FDRE (Prop_fdre_C_Q)         0.141     1.060 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[1]/Q
+                         net (fo=1, routed)           0.118     1.178    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number[1]
+    SLICE_X1Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.843     1.213    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y66          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[1]/C
+                         clock pessimism             -0.263     0.950    
+    SLICE_X1Y66          FDRE (Hold_fdre_C_D)         0.066     1.016    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.016    
+                         arrival time                           1.178    
+  -------------------------------------------------------------------
+                         slack                                  0.162    
+
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.251ns  (logic 0.141ns (56.174%)  route 0.110ns (43.826%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.211ns
+    Source Clock Delay      (SCD):    0.914ns
+    Clock Pessimism Removal (CPR):    0.282ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.573     0.914    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y69          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y69          FDRE (Prop_fdre_C_Q)         0.141     1.055 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[16]/Q
+                         net (fo=1, routed)           0.110     1.165    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number[16]
+    SLICE_X1Y68          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.841     1.211    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y68          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[16]/C
+                         clock pessimism             -0.282     0.929    
+    SLICE_X1Y68          FDRE (Hold_fdre_C_D)         0.070     0.999    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -0.999    
+                         arrival time                           1.165    
+  -------------------------------------------------------------------
+                         slack                                  0.166    
+
+Slack (MET) :             0.167ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/read_buffer_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_data_read_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.227ns  (logic 0.164ns (72.246%)  route 0.063ns (27.754%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.214ns
+    Source Clock Delay      (SCD):    0.918ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.577     0.918    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y65          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/read_buffer_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y65          FDRE (Prop_fdre_C_Q)         0.164     1.082 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/read_buffer_reg[3]/Q
+                         net (fo=2, routed)           0.063     1.145    DS18B20_design_i/SENSOR_DS18B20_0/U0/read_buffer_reg_n_0_[3]
+    SLICE_X1Y65          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_data_read_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.844     1.214    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y65          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_data_read_reg[3]/C
+                         clock pessimism             -0.283     0.931    
+    SLICE_X1Y65          FDRE (Hold_fdre_C_D)         0.047     0.978    DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_data_read_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -0.978    
+                         arrival time                           1.145    
+  -------------------------------------------------------------------
+                         slack                                  0.167    
+
+Slack (MET) :             0.179ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[24]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.247ns  (logic 0.164ns (66.369%)  route 0.083ns (33.631%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.209ns
+    Source Clock Delay      (SCD):    0.913ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.572     0.913    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y70          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y70          FDRE (Prop_fdre_C_Q)         0.164     1.077 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[24]/Q
+                         net (fo=1, routed)           0.083     1.160    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number[24]
+    SLICE_X1Y70          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.839     1.209    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y70          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[24]/C
+                         clock pessimism             -0.283     0.926    
+    SLICE_X1Y70          FDRE (Hold_fdre_C_D)         0.055     0.981    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -0.981    
+                         arrival time                           1.160    
+  -------------------------------------------------------------------
+                         slack                                  0.179    
+
+Slack (MET) :             0.180ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.257ns  (logic 0.141ns (54.828%)  route 0.116ns (45.172%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.210ns
+    Source Clock Delay      (SCD):    0.914ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.573     0.914    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y69          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y69          FDRE (Prop_fdre_C_Q)         0.141     1.055 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[19]/Q
+                         net (fo=1, routed)           0.116     1.171    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number[19]
+    SLICE_X0Y69          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.840     1.210    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y69          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[19]/C
+                         clock pessimism             -0.283     0.927    
+    SLICE_X0Y69          FDRE (Hold_fdre_C_D)         0.064     0.991    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -0.991    
+                         arrival time                           1.171    
+  -------------------------------------------------------------------
+                         slack                                  0.180    
+
+Slack (MET) :             0.182ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_data_read_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.263ns  (logic 0.141ns (53.571%)  route 0.122ns (46.429%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.215ns
+    Source Clock Delay      (SCD):    0.918ns
+    Clock Pessimism Removal (CPR):    0.282ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.577     0.918    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y65          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_data_read_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y65          FDRE (Prop_fdre_C_Q)         0.141     1.059 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_data_read_reg[1]/Q
+                         net (fo=17, routed)          0.122     1.181    DS18B20_design_i/SENSOR_DS18B20_0/U0/p_6_in[1]
+    SLICE_X1Y64          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.845     1.215    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y64          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[1]/C
+                         clock pessimism             -0.282     0.933    
+    SLICE_X1Y64          FDRE (Hold_fdre_C_D)         0.066     0.999    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.999    
+                         arrival time                           1.181    
+  -------------------------------------------------------------------
+                         slack                                  0.182    
+
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[46]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[46]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.280ns  (logic 0.164ns (58.537%)  route 0.116ns (41.463%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.207ns
+    Source Clock Delay      (SCD):    0.912ns
+    Clock Pessimism Removal (CPR):    0.282ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.571     0.912    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y72          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[46]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y72          FDRE (Prop_fdre_C_Q)         0.164     1.076 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[46]/Q
+                         net (fo=1, routed)           0.116     1.192    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number[46]
+    SLICE_X1Y72          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[46]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.837     1.207    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y72          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[46]/C
+                         clock pessimism             -0.282     0.925    
+    SLICE_X1Y72          FDRE (Hold_fdre_C_D)         0.076     1.001    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[46]
+  -------------------------------------------------------------------
+                         required time                         -1.001    
+                         arrival time                           1.192    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+Slack (MET) :             0.197ns  (arrival time - required time)
+  Source:                 DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Destination:            DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_1  {rise@0.000ns fall@500.000ns period=1000.000ns})
+  Path Group:             clk_fpga_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_1 rise@0.000ns - clk_fpga_1 rise@0.000ns)
+  Data Path Delay:        0.280ns  (logic 0.164ns (58.537%)  route 0.116ns (41.463%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.212ns
+    Source Clock Delay      (SCD):    0.916ns
+    Clock Pessimism Removal (CPR):    0.283ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.315     0.315    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.341 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.575     0.916    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X0Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y67          FDRE (Prop_fdre_C_Q)         0.164     1.080 r  DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[13]/Q
+                         net (fo=1, routed)           0.116     1.196    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number[13]
+    SLICE_X1Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_1 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]
+                         net (fo=1, routed)           0.341     0.341    DS18B20_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     0.370 r  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O
+                         net (fo=228, routed)         0.842     1.212    DS18B20_design_i/SENSOR_DS18B20_0/U0/i_clk_1mhz
+    SLICE_X1Y67          FDRE                                         r  DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[13]/C
+                         clock pessimism             -0.283     0.929    
+    SLICE_X1Y67          FDRE (Hold_fdre_C_D)         0.070     0.999    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -0.999    
+                         arrival time                           1.196    
+  -------------------------------------------------------------------
+                         slack                                  0.197    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpga_1
+Waveform(ns):       { 0.000 500.000 }
+Period(ns):         1000.000
+Sources:            { DS18B20_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[1] }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         1000.000    997.845    BUFGCTRL_X0Y0  DS18B20_design_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/I
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X2Y64    DS18B20_design_i/SENSOR_DS18B20_0/U0/bit_count_io_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X2Y64    DS18B20_design_i/SENSOR_DS18B20_0/U0/bit_count_io_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X2Y64    DS18B20_design_i/SENSOR_DS18B20_0/U0/bit_count_io_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X2Y64    DS18B20_design_i/SENSOR_DS18B20_0/U0/bit_count_io_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X2Y63    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X2Y63    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[4]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X2Y63    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[5]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X0Y62    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[6]/C
+Min Period        n/a     FDRE/C   n/a            1.000         1000.000    999.000    SLICE_X0Y62    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[7]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X3Y59    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[0]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X3Y59    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[1]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X3Y59    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[2]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X3Y59    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[3]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X4Y60    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[4]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X4Y60    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[5]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X4Y60    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[6]/C
+Low Pulse Width   Slow    FDSE/C   n/a            0.500         500.000     499.500    SLICE_X4Y60    DS18B20_design_i/SENSOR_DS18B20_0/U0/sampling_interval_timer_reg[7]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X8Y71    DS18B20_design_i/SENSOR_DS18B20_0/U0/calculated_crc_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X8Y71    DS18B20_design_i/SENSOR_DS18B20_0/U0/calculated_crc_reg[6]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X3Y66    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[8]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X3Y66    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_temperature_reg[9]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X0Y73    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[40]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X0Y73    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[43]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X0Y73    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_serial_number_reg[45]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X2Y66    DS18B20_design_i/SENSOR_DS18B20_0/U0/buffer_serial_number_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X3Y71    DS18B20_design_i/SENSOR_DS18B20_0/U0/error_flag_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X1Y63    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_temperature_reg[10]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X1Y63    DS18B20_design_i/SENSOR_DS18B20_0/U0/o_temperature_reg[11]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         500.000     499.500    SLICE_X4Y66    DS18B20_design_i/SENSOR_DS18B20_0/U0/ow_out_status_reg[0]/C
+
+
+
