@@ -6,24 +6,45 @@ end SENSOR_DS18B20_tb;
 
 architecture SENSOR_DS18B20_tb_arch of SENSOR_DS18B20_tb is
     component SENSOR_DS18B20 is
-        Port ( 
+        port (
+            --
             -- fabric internal ports
-            o_temp         : out std_logic_vector(11 downto 0);
-            o_device_found : out std_logic;
-            o_error        : out std_logic;
-            i_clk_1mhz     : in std_logic;
+            --
+            -- the temperature reported by the DS18B20 sensor;
+            -- valid if o_data_valid = '1'
+            o_temperature        : out std_logic_vector(11 downto 0) := X"000";
+            -- toggled every time o_temperature is updated
+            o_temperature_toggle : out std_logic := '0';
+            -- the serial number reported by the DS18B20 sensor;
+            -- valid if o_data_valid = '1'
+            o_serial_number : out std_logic_vector(47 downto 0) := X"000000000000";
+            -- validity of the outputs above
+            o_data_valid    : out std_logic := '0';
+            -- indicates whether a device has been found ('1') or not ('0')
+            o_device_found  : out std_logic := '0';
+            -- indicates a device or communication failure; the driver will retry
+            -- communication on error, so the error flag might be reset later on
+            o_error         : out std_logic := '0';
+            -- clock input (1MHz)
+            i_clk_1mhz      : in std_logic;
+            
+            --
             -- external I/O port
             -- Required constraints: IOSTANDARD LVCMOS33   PULLTYPE PULLUP
-            io_dq_I        : in std_logic;
-            io_dq_O        : out std_logic;
-            io_dq_T        : out std_logic);
+            --
+            io_dq_I         : in std_logic;
+            io_dq_O         : out std_logic := '0';
+            io_dq_T         : out std_logic := '1');
     end component;
     
     -- fabric internal ports
-    signal o_temp         :  std_logic_vector(11 downto 0);
-    signal o_device_found :  std_logic;
-    signal o_error        :  std_logic;
-    signal i_clk_1mhz     :  std_logic := '1';
+    signal o_temperature        :  std_logic_vector(11 downto 0);
+    signal o_temperature_toggle : std_logic;
+    signal o_serial_number      : std_logic_vector(47 downto 0);
+    signal o_data_valid         : std_logic;
+    signal o_device_found       :  std_logic;
+    signal o_error              :  std_logic;
+    signal i_clk_1mhz           :  std_logic := '1';
      -- external I/O port
      -- Required constraints: IOSTANDARD LVCMOS33   PULLTYPE PULLUP
     signal io_dq_I         :  std_logic;
@@ -34,7 +55,10 @@ architecture SENSOR_DS18B20_tb_arch of SENSOR_DS18B20_tb is
 begin
     uut : SENSOR_DS18B20
     PORT MAP (
-        o_temp => o_temp,
+        o_temperature => o_temperature,
+        o_temperature_toggle => o_temperature_toggle,
+        o_serial_number => o_serial_number,
+        o_data_valid => o_data_valid,
         o_device_found => o_device_found,
         o_error => o_error,
         i_clk_1mhz => i_clk_1mhz,
