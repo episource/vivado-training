@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Thu Nov  2 11:44:58 2017
+| Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date             : Fri Nov  3 14:49:42 2017
 | Host             : Wimucs running 64-bit major release  (build 9200)
 | Command          : report_power -file DS18B20_design_wrapper_power_routed.rpt -pb DS18B20_design_wrapper_power_summary_routed.pb -rpx DS18B20_design_wrapper_power_routed.rpx
 | Design           : DS18B20_design_wrapper
@@ -29,18 +29,21 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+-------+
-| Total On-Chip Power (W)  | 1.684 |
-| Dynamic (W)              | 1.554 |
-| Device Static (W)        | 0.130 |
-| Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 65.6  |
-| Junction Temperature (C) | 44.4  |
-| Confidence Level         | Low   |
-| Setting File             | ---   |
-| Simulation Activity File | ---   |
-| Design Nets Matched      | NA    |
-+--------------------------+-------+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.678        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.554        |
+| Device Static (W)        | 0.123        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 65.6         |
+| Junction Temperature (C) | 44.4         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
 1.1 On-Chip Components
@@ -50,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        4 |       --- |             --- |
-| Slice Logic    |    <0.001 |      732 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      283 |     17600 |            1.61 |
+| Slice Logic    |    <0.001 |      655 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      225 |     17600 |            1.28 |
 |   Register     |    <0.001 |      228 |     35200 |            0.65 |
 |   CARRY4       |    <0.001 |       14 |      4400 |            0.32 |
-|   Others       |     0.000 |      138 |       --- |             --- |
-| Signals        |    <0.001 |      530 |       --- |             --- |
-| I/O            |    <0.001 |        4 |       100 |            4.00 |
+|   Others       |     0.000 |      137 |       --- |             --- |
+| Signals        |    <0.001 |      471 |       --- |             --- |
+| I/O            |    <0.001 |        3 |       100 |            3.00 |
 | PS7            |     1.554 |        1 |       --- |             --- |
-| Static Power   |     0.130 |          |           |                 |
-| Total          |     1.684 |          |           |                 |
+| Static Power   |     0.123 |          |           |                 |
+| Total          |     1.678 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +73,7 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.007 |       0.000 |      0.007 |
-| Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |
+| Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -154,7 +157,7 @@ Table of Contents
 |     processing_system7_0 |     1.554 |
 |       inst               |     1.554 |
 |     xlconcat_0           |     0.000 |
-|   jb4_tri_iobuf_0        |     0.000 |
+|   JB4_tri_iobuf_0        |     0.000 |
 +--------------------------+-----------+
 
 

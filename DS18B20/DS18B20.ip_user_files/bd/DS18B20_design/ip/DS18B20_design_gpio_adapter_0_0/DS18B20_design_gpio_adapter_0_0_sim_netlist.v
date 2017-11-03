@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Wed Oct  4 14:47:20 2017
+// Date        : Wed Oct  4 14:58:48 2017
 // Host        : Wimucs running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/DS18B20/DS18B20.srcs/sources_1/bd/DS18B20_design/ip/DS18B20_design_gpio_adapter_0_0/DS18B20_design_gpio_adapter_0_0_sim_netlist.v
@@ -21,21 +21,21 @@ module DS18B20_design_gpio_adapter_0_0
     gpio_out_i,
     gpio_out_o,
     gpio_out_t);
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_in TRI_I" *) output [7:0]gpio_in_i;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_in TRI_O" *) input [7:0]gpio_in_o;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_in TRI_T" *) input [7:0]gpio_in_t;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_out TRI_I" *) input [7:0]gpio_out_i;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_out TRI_O" *) output [7:0]gpio_out_o;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_out TRI_T" *) output [7:0]gpio_out_t;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_in TRI_I" *) output [0:0]gpio_in_i;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_in TRI_O" *) input [0:0]gpio_in_o;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_in TRI_T" *) input [0:0]gpio_in_t;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_out TRI_I" *) input [0:0]gpio_out_i;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_out TRI_O" *) output [0:0]gpio_out_o;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 gpio_out TRI_T" *) output [0:0]gpio_out_t;
 
-  wire [7:0]gpio_in_i;
-  wire [7:0]gpio_in_o;
-  wire [7:0]gpio_in_t;
-  wire [7:0]gpio_out_i;
-  wire [7:0]gpio_out_o;
-  wire [7:0]gpio_out_t;
+  wire [0:0]gpio_in_i;
+  wire [0:0]gpio_in_o;
+  wire [0:0]gpio_in_t;
+  wire [0:0]gpio_out_i;
+  wire [0:0]gpio_out_o;
+  wire [0:0]gpio_out_t;
 
-  (* GPIO_VECTOR_SIZE = "8" *) 
+  (* GPIO_VECTOR_SIZE = "1" *) 
   DS18B20_design_gpio_adapter_0_0_gpio_adapter U0
        (.gpio_in_i(gpio_in_i),
         .gpio_in_o(gpio_in_o),
@@ -45,7 +45,7 @@ module DS18B20_design_gpio_adapter_0_0
         .gpio_out_t(gpio_out_t));
 endmodule
 
-(* GPIO_VECTOR_SIZE = "8" *) (* ORIG_REF_NAME = "gpio_adapter" *) 
+(* GPIO_VECTOR_SIZE = "1" *) (* ORIG_REF_NAME = "gpio_adapter" *) 
 module DS18B20_design_gpio_adapter_0_0_gpio_adapter
    (gpio_in_i,
     gpio_in_o,
@@ -53,20 +53,20 @@ module DS18B20_design_gpio_adapter_0_0_gpio_adapter
     gpio_out_i,
     gpio_out_o,
     gpio_out_t);
-  output [7:0]gpio_in_i;
-  input [7:0]gpio_in_o;
-  input [7:0]gpio_in_t;
-  input [7:0]gpio_out_i;
-  output [7:0]gpio_out_o;
-  output [7:0]gpio_out_t;
+  output [0:0]gpio_in_i;
+  input [0:0]gpio_in_o;
+  input [0:0]gpio_in_t;
+  input [0:0]gpio_out_i;
+  output [0:0]gpio_out_o;
+  output [0:0]gpio_out_t;
 
-  wire [7:0]gpio_in_o;
-  wire [7:0]gpio_in_t;
-  wire [7:0]gpio_out_i;
+  wire [0:0]gpio_in_o;
+  wire [0:0]gpio_in_t;
+  wire [0:0]gpio_out_i;
 
-  assign gpio_in_i[7:0] = gpio_out_i;
-  assign gpio_out_o[7:0] = gpio_in_o;
-  assign gpio_out_t[7:0] = gpio_in_t;
+  assign gpio_in_i[0] = gpio_out_i;
+  assign gpio_out_o[0] = gpio_in_o;
+  assign gpio_out_t[0] = gpio_in_t;
 endmodule
 `ifndef GLBL
 `define GLBL

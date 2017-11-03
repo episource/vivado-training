@@ -55,12 +55,12 @@ USE ieee.numeric_std.ALL;
 
 ENTITY DS18B20_design_gpio_adapter_0_0 IS
   PORT (
-    gpio_in_i : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    gpio_in_o : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    gpio_in_t : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    gpio_out_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    gpio_out_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    gpio_out_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+    gpio_in_i : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gpio_in_o : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gpio_in_t : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gpio_out_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gpio_out_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    gpio_out_t : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END DS18B20_design_gpio_adapter_0_0;
 
@@ -72,12 +72,12 @@ ARCHITECTURE DS18B20_design_gpio_adapter_0_0_arch OF DS18B20_design_gpio_adapter
       GPIO_VECTOR_SIZE : INTEGER
     );
     PORT (
-      gpio_in_i : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      gpio_in_o : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      gpio_in_t : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      gpio_out_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      gpio_out_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      gpio_out_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+      gpio_in_i : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+      gpio_in_o : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      gpio_in_t : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      gpio_out_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      gpio_out_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+      gpio_out_t : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
     );
   END COMPONENT gpio_adapter;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -90,7 +90,7 @@ ARCHITECTURE DS18B20_design_gpio_adapter_0_0_arch OF DS18B20_design_gpio_adapter
 BEGIN
   U0 : gpio_adapter
     GENERIC MAP (
-      GPIO_VECTOR_SIZE => 8
+      GPIO_VECTOR_SIZE => 1
     )
     PORT MAP (
       gpio_in_i => gpio_in_i,

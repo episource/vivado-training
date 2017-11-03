@@ -60,6 +60,9 @@ ENET0_MDIO_MDC,
 ENET0_MDIO_O, 
 ENET0_MDIO_T, 
 ENET0_MDIO_I, 
+GPIO_I, 
+GPIO_O, 
+GPIO_T, 
 SDIO0_WP, 
 TTC0_WAVE0_OUT, 
 TTC0_WAVE1_OUT, 
@@ -96,6 +99,9 @@ output ENET0_MDIO_MDC;
 output ENET0_MDIO_O;
 output ENET0_MDIO_T;
 input ENET0_MDIO_I;
+input [63 : 0] GPIO_I;
+output [63 : 0] GPIO_O;
+output [63 : 0] GPIO_T;
 input SDIO0_WP;
 output TTC0_WAVE0_OUT;
 output TTC0_WAVE1_OUT;
@@ -128,7 +134,7 @@ input PS_SRSTB;
 input PS_CLK;
 input PS_PORB;
 
-  processing_system7_vip_v1_0_1 #(
+  processing_system7_vip_v1_0_2 #(
     .C_USE_M_AXI_GP0(0),
     .C_USE_M_AXI_GP1(0),
     .C_USE_S_AXI_ACP(0),

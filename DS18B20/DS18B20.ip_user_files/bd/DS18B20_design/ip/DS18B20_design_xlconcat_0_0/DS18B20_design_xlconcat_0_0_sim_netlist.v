@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Tue Oct  3 18:36:11 2017
+// Date        : Mon Oct 16 19:24:07 2017
 // Host        : Wimucs running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/DS18B20/DS18B20.srcs/sources_1/bd/DS18B20_design/ip/DS18B20_design_xlconcat_0_0/DS18B20_design_xlconcat_0_0_sim_netlist.v
+//               C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/DS18B20/DS18B20.srcs/sources_1/bd/DS18B20_design/ip/DS18B20_design_xlconcat_0_0/DS18B20_design_xlconcat_0_0_sim_netlist.v
 // Design      : DS18B20_design_xlconcat_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,17 +18,29 @@ module DS18B20_design_xlconcat_0_0
    (In0,
     In1,
     In2,
+    In3,
+    In4,
+    In5,
     dout);
   input [0:0]In0;
   input [0:0]In1;
-  input [11:0]In2;
-  output [13:0]dout;
+  input [0:0]In2;
+  input [0:0]In3;
+  input [11:0]In4;
+  input [47:0]In5;
+  output [63:0]dout;
 
   wire [0:0]In0;
   wire [0:0]In1;
-  wire [11:0]In2;
+  wire [0:0]In2;
+  wire [0:0]In3;
+  wire [11:0]In4;
+  wire [47:0]In5;
 
-  assign dout[13:2] = In2;
+  assign dout[63:16] = In5;
+  assign dout[15:4] = In4;
+  assign dout[3] = In3;
+  assign dout[2] = In2;
   assign dout[1] = In1;
   assign dout[0] = In0;
 endmodule

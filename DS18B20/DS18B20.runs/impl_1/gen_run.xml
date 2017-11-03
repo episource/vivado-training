@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1509619260">
-  <File Type="PWROPT-DRC" Name="DS18B20_design_wrapper_drc_pwropted.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1509716757">
+  <File Type="PWROPT-DCP" Name="DS18B20_design_wrapper_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="DS18B20_design_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="DS18B20_design_wrapper.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="DS18B20_design_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="DS18B20_design_wrapper_reports.tcl"/>
+  <File Type="BG-DRC" Name="DS18B20_design_wrapper.drc"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="DS18B20_design_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="DS18B20_design_wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="DS18B20_design_wrapper_power_routed.rpx"/>
-  <File Type="PA-TCL" Name="DS18B20_design_wrapper.tcl"/>
   <File Type="OPT-HWDEF" Name="DS18B20_design_wrapper.hwdef"/>
-  <File Type="RDI-RDI" Name="DS18B20_design_wrapper.vdi"/>
   <File Type="OPT-DCP" Name="DS18B20_design_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="DS18B20_design_wrapper_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="DS18B20_design_wrapper_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="DS18B20_design_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="DS18B20_design_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="DS18B20_design_wrapper_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="DS18B20_design_wrapper_placed.dcp"/>
   <File Type="PLACE-IO" Name="DS18B20_design_wrapper_io_placed.rpt"/>
@@ -25,39 +27,40 @@
   <File Type="POSTPLACE-PWROPT-TIMING" Name="DS18B20_design_wrapper_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="DS18B20_design_wrapper_physopt.dcp"/>
   <File Type="PHYSOPT-DRC" Name="DS18B20_design_wrapper_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="DS18B20_design_wrapper.bit"/>
   <File Type="PHYSOPT-TIMING" Name="DS18B20_design_wrapper_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="DS18B20_design_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="DS18B20_design_wrapper_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="DS18B20_design_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="DS18B20_design_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="DS18B20_design_wrapper_drc_routed.pb"/>
-  <File Type="BG-BIN" Name="DS18B20_design_wrapper.bin"/>
-  <File Type="ROUTE-DRC-RPX" Name="DS18B20_design_wrapper_drc_routed.rpx"/>
-  <File Type="BG-DRC" Name="DS18B20_design_wrapper.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="DS18B20_design_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="DS18B20_design_wrapper.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="DS18B20_design_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="DS18B20_design_wrapper_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="DS18B20_design_wrapper.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="DS18B20_design_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="DS18B20_design_wrapper.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="DS18B20_design_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="DS18B20_design_wrapper.bin"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="DS18B20_design_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="DS18B20_design_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="DS18B20_design_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="DS18B20_design_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="DS18B20_design_wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="DS18B20_design_wrapper_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="DS18B20_design_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="DS18B20_design_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="DS18B20_design_wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="DS18B20_design_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="DS18B20_design_wrapper.vdi"/>
   <File Type="ROUTE-CLK" Name="DS18B20_design_wrapper_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="DS18B20_design_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="DS18B20_design_wrapper_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="DS18B20_design_wrapper_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="DS18B20_design_wrapper_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="DS18B20_design_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="DS18B20_design_wrapper.bit"/>
-  <File Type="BITSTR-RBT" Name="DS18B20_design_wrapper.rbt"/>
   <File Type="BITSTR-NKY" Name="DS18B20_design_wrapper.nky"/>
   <File Type="BITSTR-BMM" Name="DS18B20_design_wrapper_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="DS18B20_design_wrapper.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="DS18B20_design_wrapper.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="DS18B20_design_wrapper.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
@@ -112,7 +115,4 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="DS18B20_design_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="DS18B20_design_xlconcat_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="DS18B20_design_SENSOR_DS18B20_0_0"/>
 </GenRun>

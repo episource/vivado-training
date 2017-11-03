@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Thu Nov  2 11:40:49 2017
+--Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+--Date        : Fri Nov  3 14:17:27 2017
 --Host        : Wimucs running 64-bit major release  (build 9200)
 --Command     : generate_target DS18B20_design_wrapper.bd
 --Design      : DS18B20_design_wrapper
@@ -34,10 +34,9 @@ entity DS18B20_design_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    JB4_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     LD0 : out STD_LOGIC;
-    LD1 : out STD_LOGIC;
-    jb1 : out STD_LOGIC;
-    jb4_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 )
+    LD1 : out STD_LOGIC
   );
 end DS18B20_design_wrapper;
 
@@ -65,12 +64,11 @@ architecture STRUCTURE of DS18B20_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    JB4_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    JB4_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 );
-    JB4_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     LD0 : out STD_LOGIC;
     LD1 : out STD_LOGIC;
-    jb1 : out STD_LOGIC
+    JB4_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    JB4_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 );
+    JB4_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component DS18B20_design;
   component IOBUF is
@@ -81,10 +79,10 @@ architecture STRUCTURE of DS18B20_design_wrapper is
     IO : inout STD_LOGIC
   );
   end component IOBUF;
-  signal jb4_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal jb4_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal jb4_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal jb4_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal JB4_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal JB4_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal JB4_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal JB4_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
 DS18B20_design_i: component DS18B20_design
      port map (
@@ -109,18 +107,17 @@ DS18B20_design_i: component DS18B20_design
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      JB4_tri_i(0) => jb4_tri_i_0(0),
-      JB4_tri_o(0) => jb4_tri_o_0(0),
-      JB4_tri_t(0) => jb4_tri_t_0(0),
+      JB4_tri_i(0) => JB4_tri_i_0(0),
+      JB4_tri_o(0) => JB4_tri_o_0(0),
+      JB4_tri_t(0) => JB4_tri_t_0(0),
       LD0 => LD0,
-      LD1 => LD1,
-      jb1 => jb1
+      LD1 => LD1
     );
-jb4_tri_iobuf_0: component IOBUF
+JB4_tri_iobuf_0: component IOBUF
      port map (
-      I => jb4_tri_o_0(0),
-      IO => jb4_tri_io(0),
-      O => jb4_tri_i_0(0),
-      T => jb4_tri_t_0(0)
+      I => JB4_tri_o_0(0),
+      IO => JB4_tri_io(0),
+      O => JB4_tri_i_0(0),
+      T => JB4_tri_t_0(0)
     );
 end STRUCTURE;

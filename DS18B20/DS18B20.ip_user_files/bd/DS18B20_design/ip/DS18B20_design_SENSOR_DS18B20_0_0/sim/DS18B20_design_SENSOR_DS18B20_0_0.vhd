@@ -55,11 +55,16 @@ USE ieee.numeric_std.ALL;
 
 ENTITY DS18B20_design_SENSOR_DS18B20_0_0 IS
   PORT (
-    o_temp : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+    o_temperature : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+    o_temperature_toggle : OUT STD_LOGIC;
+    o_serial_number : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
+    o_data_valid : OUT STD_LOGIC;
     o_device_found : OUT STD_LOGIC;
     o_error : OUT STD_LOGIC;
     i_clk_1mhz : IN STD_LOGIC;
-    io_dq : INOUT STD_LOGIC
+    io_dq_I : IN STD_LOGIC;
+    io_dq_O : OUT STD_LOGIC;
+    io_dq_T : OUT STD_LOGIC
   );
 END DS18B20_design_SENSOR_DS18B20_0_0;
 
@@ -68,20 +73,30 @@ ARCHITECTURE DS18B20_design_SENSOR_DS18B20_0_0_arch OF DS18B20_design_SENSOR_DS1
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF DS18B20_design_SENSOR_DS18B20_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT SENSOR_DS18B20 IS
     PORT (
-      o_temp : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+      o_temperature : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+      o_temperature_toggle : OUT STD_LOGIC;
+      o_serial_number : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
+      o_data_valid : OUT STD_LOGIC;
       o_device_found : OUT STD_LOGIC;
       o_error : OUT STD_LOGIC;
       i_clk_1mhz : IN STD_LOGIC;
-      io_dq : INOUT STD_LOGIC
+      io_dq_I : IN STD_LOGIC;
+      io_dq_O : OUT STD_LOGIC;
+      io_dq_T : OUT STD_LOGIC
     );
   END COMPONENT SENSOR_DS18B20;
 BEGIN
   U0 : SENSOR_DS18B20
     PORT MAP (
-      o_temp => o_temp,
+      o_temperature => o_temperature,
+      o_temperature_toggle => o_temperature_toggle,
+      o_serial_number => o_serial_number,
+      o_data_valid => o_data_valid,
       o_device_found => o_device_found,
       o_error => o_error,
       i_clk_1mhz => i_clk_1mhz,
-      io_dq => io_dq
+      io_dq_I => io_dq_I,
+      io_dq_O => io_dq_O,
+      io_dq_T => io_dq_T
     );
 END DS18B20_design_SENSOR_DS18B20_0_0_arch;

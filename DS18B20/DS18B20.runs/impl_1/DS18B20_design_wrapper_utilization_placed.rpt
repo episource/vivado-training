@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Thu Nov  2 11:44:26 2017
+| Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date         : Fri Nov  3 14:49:05 2017
 | Host         : Wimucs running 64-bit major release  (build 9200)
 | Command      : report_utilization -file DS18B20_design_wrapper_utilization_placed.rpt -pb DS18B20_design_wrapper_utilization_placed.pb
 | Design       : DS18B20_design_wrapper
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs              |  283 |     0 |     17600 |  1.61 |
-|   LUT as Logic          |  283 |     0 |     17600 |  1.61 |
+| Slice LUTs              |  225 |     0 |     17600 |  1.28 |
+|   LUT as Logic          |  225 |     0 |     17600 |  1.28 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
 | Slice Registers         |  228 |     0 |     35200 |  0.65 |
 |   Register as Flip Flop |  228 |     0 |     35200 |  0.65 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 21    |          Yes |         Set |            - |
-| 207   |          Yes |       Reset |            - |
+| 48    |          Yes |         Set |            - |
+| 180   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,21 +67,21 @@ Table of Contents
 +-------------------------------------------+------+-------+-----------+-------+
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
-| Slice                                     |  113 |     0 |      4400 |  2.57 |
-|   SLICEL                                  |   69 |     0 |           |       |
-|   SLICEM                                  |   44 |     0 |           |       |
-| LUT as Logic                              |  283 |     0 |     17600 |  1.61 |
+| Slice                                     |  103 |     0 |      4400 |  2.34 |
+|   SLICEL                                  |   61 |     0 |           |       |
+|   SLICEM                                  |   42 |     0 |           |       |
+| LUT as Logic                              |  225 |     0 |     17600 |  1.28 |
 |   using O5 output only                    |    0 |       |           |       |
-|   using O6 output only                    |  214 |       |           |       |
-|   using O5 and O6                         |   69 |       |           |       |
+|   using O6 output only                    |  174 |       |           |       |
+|   using O5 and O6                         |   51 |       |           |       |
 | LUT as Memory                             |    0 |     0 |      6000 |  0.00 |
 |   LUT as Distributed RAM                  |    0 |     0 |           |       |
 |   LUT as Shift Register                   |    0 |     0 |           |       |
-| LUT Flip Flop Pairs                       |   77 |     0 |     17600 |  0.44 |
-|   fully used LUT-FF pairs                 |   15 |       |           |       |
-|   LUT-FF pairs with one unused LUT output |   58 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  |   60 |       |           |       |
-| Unique Control Sets                       |   18 |       |           |       |
+| LUT Flip Flop Pairs                       |   49 |     0 |     17600 |  0.28 |
+|   fully used LUT-FF pairs                 |    2 |       |           |       |
+|   LUT-FF pairs with one unused LUT output |   40 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  |   43 |       |           |       |
+| Unique Control Sets                       |   20 |       |           |       |
 +-------------------------------------------+------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.
 
@@ -115,8 +115,8 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |    4 |     4 |       100 |   4.00 |
-|   IOB Master Pads           |    2 |       |           |        |
+| Bonded IOB                  |    3 |     3 |       100 |   3.00 |
+|   IOB Master Pads           |    1 |       |           |        |
 |   IOB Slave Pads            |    2 |       |           |        |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |   130 |       130 | 100.00 |
@@ -173,19 +173,19 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| FDRE     |  207 |         Flop & Latch |
-| LUT6     |  175 |                  LUT |
+| FDRE     |  180 |         Flop & Latch |
 | BIBUF    |  130 |                   IO |
-| LUT2     |   61 |                  LUT |
-| LUT5     |   49 |                  LUT |
-| LUT4     |   40 |                  LUT |
-| LUT3     |   26 |                  LUT |
-| FDSE     |   21 |         Flop & Latch |
+| LUT6     |  125 |                  LUT |
+| LUT5     |   51 |                  LUT |
+| FDSE     |   48 |         Flop & Latch |
+| LUT4     |   37 |                  LUT |
+| LUT2     |   33 |                  LUT |
+| LUT3     |   27 |                  LUT |
 | CARRY4   |   14 |           CarryLogic |
-| OBUFT    |    2 |                   IO |
+| LUT1     |    3 |                  LUT |
 | OBUF     |    2 |                   IO |
 | PS7      |    1 | Specialized Resource |
-| LUT1     |    1 |                  LUT |
+| OBUFT    |    1 |                   IO |
 | IBUF     |    1 |                   IO |
 | BUFG     |    1 |                Clock |
 +----------+------+----------------------+
@@ -202,13 +202,8 @@ Table of Contents
 10. Instantiated Netlists
 -------------------------
 
-+---------------------------------------+------+
-|                Ref Name               | Used |
-+---------------------------------------+------+
-| DS18B20_design_xlconcat_0_0           |    1 |
-| DS18B20_design_processing_system7_0_0 |    1 |
-| DS18B20_design_gpio_adapter_0_0       |    1 |
-| DS18B20_design_SENSOR_DS18B20_0_0     |    1 |
-+---------------------------------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
 
 

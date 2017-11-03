@@ -1,0 +1,8 @@
+vhdl xil_defaultlib  \
+"../../../bd/DS18B20_design/ip/DS18B20_design_SENSOR_DS18B20_0_0/sim/DS18B20_design_SENSOR_DS18B20_0_0.vhd" \
+"../../../bd/DS18B20_design/hdl/DS18B20_design.vhd" \
+"../../../bd/DS18B20_design/ipshared/1ba5/gpio_adapter.vhd" \
+"../../../bd/DS18B20_design/ip/DS18B20_design_gpio_adapter_0_0/sim/DS18B20_design_gpio_adapter_0_0.vhd" \
+"../../../bd/DS18B20_design/sim/DS18B20_design.vhd" \
+
+nosort
