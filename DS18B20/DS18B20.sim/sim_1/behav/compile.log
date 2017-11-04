@@ -1,4 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/DS18B20/DS18B20.srcs/sources_1/new/SENSOR_DS18B20.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity SENSOR_DS18B20
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Philipp/Documents/Scratch/Vivado/vivado-training/DS18B20/DS18B20.srcs/sim_1/new/SENSOR_DS18B20_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity SENSOR_DS18B20_tb

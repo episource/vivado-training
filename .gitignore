@@ -1,6 +1,10 @@
-**/*.cache/wt
 **/*.tmp
 **/*.Xil
+**/*.cache
+**/*.hw
+**/*.ip_user_files
+**/*.runs
+**/*.sim
 **/vivado*.jou
 **/vivado*.log
 **/vivado*.str

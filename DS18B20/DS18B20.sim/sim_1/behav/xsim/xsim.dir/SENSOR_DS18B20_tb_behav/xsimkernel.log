@@ -1,4 +1,0 @@
-Running: xsim.dir/SENSOR_DS18B20_tb_behav/xsimk.exe -simmode gui -wdb SENSOR_DS18B20_tb_behav.wdb -simrunnum 0 -socket 53301
-Design successfully loaded
-Design Loading Memory Usage: 6692 KB (Peak: 6692 KB)
-Design Loading CPU Usage: 62 ms
